@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BrowseController: UITableViewController {
+class SectionListController: UITableViewController {
     
     @IBOutlet weak var menuButton: UIBarButtonItem!
     let tableData = ["B1", "B2", "B3"];

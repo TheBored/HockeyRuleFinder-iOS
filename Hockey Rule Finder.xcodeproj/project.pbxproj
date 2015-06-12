@@ -15,7 +15,7 @@
 		D39321AD1B23778F00998B33 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D39321AB1B23778F00998B33 /* LaunchScreen.xib */; };
 		D39321B91B23778F00998B33 /* Hockey_Rule_FinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39321B81B23778F00998B33 /* Hockey_Rule_FinderTests.swift */; };
 		D39321C61B23797400998B33 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D39321C51B23797400998B33 /* SWRevealViewController.m */; };
-		D39321C91B237B6000998B33 /* BrowseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39321C81B237B6000998B33 /* BrowseController.swift */; };
+		D39321C91B237B6000998B33 /* SectionListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39321C81B237B6000998B33 /* SectionListController.swift */; };
 		D39321CB1B2A350A00998B33 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39321CA1B2A350A00998B33 /* MenuController.swift */; };
 		D39321CD1B2A5D7300998B33 /* QuickReferenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39321CC1B2A5D7300998B33 /* QuickReferenceController.swift */; };
 /* End PBXBuildFile section */
@@ -45,7 +45,7 @@
 		D39321C31B23797300998B33 /* Hockey Rule Finder-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Hockey Rule Finder-Bridging-Header.h"; sourceTree = "<group>"; };
 		D39321C41B23797400998B33 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		D39321C51B23797400998B33 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
-		D39321C81B237B6000998B33 /* BrowseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrowseController.swift; sourceTree = "<group>"; };
+		D39321C81B237B6000998B33 /* SectionListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionListController.swift; sourceTree = "<group>"; };
 		D39321CA1B2A350A00998B33 /* MenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
 		D39321CC1B2A5D7300998B33 /* QuickReferenceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuickReferenceController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -139,7 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				D39321A41B23778F00998B33 /* ViewController.swift */,
-				D39321C81B237B6000998B33 /* BrowseController.swift */,
+				D39321C81B237B6000998B33 /* SectionListController.swift */,
 				D39321CA1B2A350A00998B33 /* MenuController.swift */,
 				D39321CC1B2A5D7300998B33 /* QuickReferenceController.swift */,
 				D3771CB61B2B81D60027DCCF /* RuleListController.swift */,
@@ -249,7 +249,7 @@
 			files = (
 				D39321CB1B2A350A00998B33 /* MenuController.swift in Sources */,
 				D39321CD1B2A5D7300998B33 /* QuickReferenceController.swift in Sources */,
-				D39321C91B237B6000998B33 /* BrowseController.swift in Sources */,
+				D39321C91B237B6000998B33 /* SectionListController.swift in Sources */,
 				D39321A51B23778F00998B33 /* ViewController.swift in Sources */,
 				D3771CB71B2B81D60027DCCF /* RuleListController.swift in Sources */,
 				D39321A31B23778F00998B33 /* AppDelegate.swift in Sources */,
