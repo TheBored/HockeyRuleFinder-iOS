@@ -32,12 +32,5 @@ class MenuController: UIViewController {
         let cell:UITableViewCell = tableView.dequeueReusableCellWithIdentifier(identifier, forIndexPath:indexPath) as! UITableViewCell;
         return cell;
     }
-    
-    /*
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let x:BrowseController = BrowseController();
-        self.revealViewController().pushFrontViewController(x, animated: true);
-    }
-    */
 }
 
