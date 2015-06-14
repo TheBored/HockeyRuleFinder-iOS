@@ -12,6 +12,7 @@ class SectionListController: UITableViewController {
     
     @IBOutlet weak var menuButton: UIBarButtonItem!
     let tableData = ["B1", "B2", "B3"];
+    var selectedIndex = 0;
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,9 +42,19 @@ class SectionListController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        self.selectedIndex = indexPath.row;
+        
         let cell:UITableViewCell = tableView.dequeueReusableCellWithIdentifier("main", forIndexPath:indexPath) as! UITableViewCell;
         self.performSegueWithIdentifier("to_rule_list", sender: cell);
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        if (segue.identifier == "to_rule_list") {
+            if let viewController: RuleListController = segue.destinationViewController as? RuleListController {
+                let cell:UITableViewCell = sender as! UITableViewCell;
+                viewController.prefix = tableData[selectedIndex];
+            }
+        }
+    }
 }
 

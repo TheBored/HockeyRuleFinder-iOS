@@ -1,16 +1,15 @@
 //
-//  RuleListController.swift
+//  RuleDetailController.swift
 //  Hockey Rule Finder
 //
-//  Created by Brian Maxwell on 6/12/15.
+//  Created by Brian Maxwell on 6/14/15.
 //  Copyright (c) 2015 Brian Maxwell. All rights reserved.
 //
 
-class RuleListController: UITableViewController {
+class RuleDetailController: UITableViewController {
     
     @IBOutlet weak var menuButton: UIBarButtonItem!
-    let tableData = ["R1", "R2", "R3"];
-    var selectedIndex = 0;
+    let tableData = ["D1", "D2", "D3"];
     var prefix = "";
     
     override func viewDidLoad() {
@@ -39,20 +38,4 @@ class RuleListController: UITableViewController {
         cell.textLabel!.text = prefix + " " + tableData[indexPath.row];
         return cell;
     }
-    
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        self.selectedIndex = indexPath.row;
-        let cell:UITableViewCell = tableView.dequeueReusableCellWithIdentifier("main", forIndexPath:indexPath) as! UITableViewCell;
-        self.performSegueWithIdentifier("to_rule_detail", sender: cell);
-    }
-    
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
-        if (segue.identifier == "to_rule_detail") {
-            if let viewController: RuleDetailController = segue.destinationViewController as? RuleDetailController {
-                let cell:UITableViewCell = sender as! UITableViewCell;
-                viewController.prefix = tableData[selectedIndex];
-            }
-        }
-    }
 }
-
