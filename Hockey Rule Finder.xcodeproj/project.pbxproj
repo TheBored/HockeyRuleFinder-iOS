@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D34D03C41B38E81B0080CC62 /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D34D03BB1B38E7EC0080CC62 /* SQLite.framework */; };
+		D34D03C61B38E8400080CC62 /* SQLite.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = D34D03BB1B38E7EC0080CC62 /* SQLite.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D3771CB71B2B81D60027DCCF /* RuleListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3771CB61B2B81D60027DCCF /* RuleListController.swift */; };
 		D383680A1B2DF177006BE1FA /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38368091B2DF177006BE1FA /* SearchController.swift */; };
 		D39321A31B23778F00998B33 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39321A21B23778F00998B33 /* AppDelegate.swift */; };
@@ -22,6 +24,41 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		D34D03BA1B38E7EC0080CC62 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D34D03B21B38E7EC0080CC62 /* SQLite.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DC3773F319C8CBB3004FCF85;
+			remoteInfo = SQLite;
+		};
+		D34D03BC1B38E7EC0080CC62 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D34D03B21B38E7EC0080CC62 /* SQLite.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DC3773FE19C8CBB3004FCF85;
+			remoteInfo = "SQLite Tests";
+		};
+		D34D03BE1B38E7EC0080CC62 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D34D03B21B38E7EC0080CC62 /* SQLite.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DCC6B3801A9191C300734B78;
+			remoteInfo = SQLiteCipher;
+		};
+		D34D03C01B38E7EC0080CC62 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D34D03B21B38E7EC0080CC62 /* SQLite.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DCC6B3921A9191D100734B78;
+			remoteInfo = "SQLiteCipher Tests";
+		};
+		D34D03C21B38E80E0080CC62 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D34D03B21B38E7EC0080CC62 /* SQLite.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = DC3773F219C8CBB3004FCF85;
+			remoteInfo = SQLite;
+		};
 		D39321B31B23778F00998B33 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D39321951B23778F00998B33 /* Project object */;
@@ -31,7 +68,21 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		D34D03C51B38E8260080CC62 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D34D03C61B38E8400080CC62 /* SQLite.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		D34D03B21B38E7EC0080CC62 /* SQLite.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SQLite.xcodeproj; path = Externals/SQLite.swift/SQLite.xcodeproj; sourceTree = SOURCE_ROOT; };
 		D3771CB61B2B81D60027DCCF /* RuleListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RuleListController.swift; sourceTree = "<group>"; };
 		D38368091B2DF177006BE1FA /* SearchController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
 		D393219D1B23778F00998B33 /* Hockey Rule Finder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hockey Rule Finder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -57,6 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D34D03C41B38E81B0080CC62 /* SQLite.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +122,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D34D03B11B38E7DF0080CC62 /* Externals */ = {
+			isa = PBXGroup;
+			children = (
+				D34D03B21B38E7EC0080CC62 /* SQLite.xcodeproj */,
+			);
+			name = Externals;
+			sourceTree = "<group>";
+		};
+		D34D03B31B38E7EC0080CC62 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D34D03BB1B38E7EC0080CC62 /* SQLite.framework */,
+				D34D03BD1B38E7EC0080CC62 /* SQLite Tests.xctest */,
+				D34D03BF1B38E7EC0080CC62 /* SQLite.framework */,
+				D34D03C11B38E7EC0080CC62 /* SQLiteCipher Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		D39321941B23778F00998B33 = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +162,7 @@
 		D393219F1B23778F00998B33 /* Hockey Rule Finder */ = {
 			isa = PBXGroup;
 			children = (
+				D34D03B11B38E7DF0080CC62 /* Externals */,
 				D39321C71B237B4000998B33 /* ViewControllers */,
 				D39321C21B23795900998B33 /* SWRevealViewController */,
 				D39321A21B23778F00998B33 /* AppDelegate.swift */,
@@ -160,10 +232,12 @@
 				D39321991B23778F00998B33 /* Sources */,
 				D393219A1B23778F00998B33 /* Frameworks */,
 				D393219B1B23778F00998B33 /* Resources */,
+				D34D03C51B38E8260080CC62 /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				D34D03C31B38E80E0080CC62 /* PBXTargetDependency */,
 			);
 			name = "Hockey Rule Finder";
 			productName = "Hockey Rule Finder";
@@ -217,6 +291,12 @@
 			mainGroup = D39321941B23778F00998B33;
 			productRefGroup = D393219E1B23778F00998B33 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = D34D03B31B38E7EC0080CC62 /* Products */;
+					ProjectRef = D34D03B21B38E7EC0080CC62 /* SQLite.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				D393219C1B23778F00998B33 /* Hockey Rule Finder */,
@@ -224,6 +304,37 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		D34D03BB1B38E7EC0080CC62 /* SQLite.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SQLite.framework;
+			remoteRef = D34D03BA1B38E7EC0080CC62 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D34D03BD1B38E7EC0080CC62 /* SQLite Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "SQLite Tests.xctest";
+			remoteRef = D34D03BC1B38E7EC0080CC62 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D34D03BF1B38E7EC0080CC62 /* SQLite.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SQLite.framework;
+			remoteRef = D34D03BE1B38E7EC0080CC62 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		D34D03C11B38E7EC0080CC62 /* SQLiteCipher Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "SQLiteCipher Tests.xctest";
+			remoteRef = D34D03C01B38E7EC0080CC62 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		D393219B1B23778F00998B33 /* Resources */ = {
@@ -272,6 +383,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		D34D03C31B38E80E0080CC62 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SQLite;
+			targetProxy = D34D03C21B38E80E0080CC62 /* PBXContainerItemProxy */;
+		};
 		D39321B41B23778F00998B33 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = D393219C1B23778F00998B33 /* Hockey Rule Finder */;
