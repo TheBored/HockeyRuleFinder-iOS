@@ -82,7 +82,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		D34D03B21B38E7EC0080CC62 /* SQLite.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SQLite.xcodeproj; path = Externals/SQLite.swift/SQLite.xcodeproj; sourceTree = SOURCE_ROOT; };
+		D34D03B21B38E7EC0080CC62 /* SQLite.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SQLite.xcodeproj; path = ../../Externals/SQLite.swift/SQLite.xcodeproj; sourceTree = SOURCE_ROOT; };
 		D3771CB61B2B81D60027DCCF /* RuleListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RuleListController.swift; sourceTree = "<group>"; };
 		D38368091B2DF177006BE1FA /* SearchController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
 		D393219D1B23778F00998B33 /* Hockey Rule Finder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Hockey Rule Finder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -94,7 +94,7 @@
 		D39321B21B23778F00998B33 /* Hockey Rule FinderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Hockey Rule FinderTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D39321B71B23778F00998B33 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D39321B81B23778F00998B33 /* Hockey_Rule_FinderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hockey_Rule_FinderTests.swift; sourceTree = "<group>"; };
-		D39321C31B23797300998B33 /* Hockey Rule Finder-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Hockey Rule Finder-Bridging-Header.h"; sourceTree = "<group>"; };
+		D39321C31B23797300998B33 /* Hockey Rule Finder-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "Hockey Rule Finder-Bridging-Header.h"; path = "SWRevealViewController/Hockey Rule Finder-Bridging-Header.h"; sourceTree = "<group>"; };
 		D39321C41B23797400998B33 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		D39321C51B23797400998B33 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		D39321C81B237B6000998B33 /* SectionListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionListController.swift; sourceTree = "<group>"; };
@@ -127,7 +127,7 @@
 			children = (
 				D34D03B21B38E7EC0080CC62 /* SQLite.xcodeproj */,
 			);
-			name = Externals;
+			path = Externals;
 			sourceTree = "<group>";
 		};
 		D34D03B31B38E7EC0080CC62 /* Products */ = {
@@ -170,6 +170,7 @@
 				D39321A91B23778F00998B33 /* Images.xcassets */,
 				D39321AB1B23778F00998B33 /* LaunchScreen.xib */,
 				D39321A01B23778F00998B33 /* Supporting Files */,
+				D39321C31B23797300998B33 /* Hockey Rule Finder-Bridging-Header.h */,
 			);
 			path = "Hockey Rule Finder";
 			sourceTree = "<group>";
@@ -179,7 +180,7 @@
 			children = (
 				D39321A11B23778F00998B33 /* Info.plist */,
 			);
-			name = "Supporting Files";
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		D39321B51B23778F00998B33 /* Hockey Rule FinderTests */ = {
@@ -196,7 +197,7 @@
 			children = (
 				D39321B71B23778F00998B33 /* Info.plist */,
 			);
-			name = "Supporting Files";
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		D39321C21B23795900998B33 /* SWRevealViewController */ = {
@@ -204,9 +205,8 @@
 			children = (
 				D39321C41B23797400998B33 /* SWRevealViewController.h */,
 				D39321C51B23797400998B33 /* SWRevealViewController.m */,
-				D39321C31B23797300998B33 /* Hockey Rule Finder-Bridging-Header.h */,
 			);
-			name = SWRevealViewController;
+			path = SWRevealViewController;
 			sourceTree = "<group>";
 		};
 		D39321C71B237B4000998B33 /* ViewControllers */ = {
@@ -219,7 +219,7 @@
 				D38368091B2DF177006BE1FA /* SearchController.swift */,
 				D39C42E11B2DFE7F004BCD58 /* RuleDetailController.swift */,
 			);
-			name = ViewControllers;
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -402,6 +402,7 @@
 				D39321A71B23778F00998B33 /* Base */,
 			);
 			name = Main.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 		D39321AB1B23778F00998B33 /* LaunchScreen.xib */ = {
@@ -410,6 +411,7 @@
 				D39321AC1B23778F00998B33 /* Base */,
 			);
 			name = LaunchScreen.xib;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -502,7 +504,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				INFOPLIST_FILE = "Hockey Rule Finder/Info.plist";
+				INFOPLIST_FILE = "Hockey Rule Finder/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Hockey Rule Finder/Hockey Rule Finder-Bridging-Header.h";
@@ -516,7 +518,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				INFOPLIST_FILE = "Hockey Rule Finder/Info.plist";
+				INFOPLIST_FILE = "Hockey Rule Finder/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Hockey Rule Finder/Hockey Rule Finder-Bridging-Header.h";
@@ -535,7 +537,7 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "Hockey Rule FinderTests/Info.plist";
+				INFOPLIST_FILE = "Hockey Rule FinderTests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Hockey Rule Finder.app/Hockey Rule Finder";
@@ -550,7 +552,7 @@
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "Hockey Rule FinderTests/Info.plist";
+				INFOPLIST_FILE = "Hockey Rule FinderTests/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Hockey Rule Finder.app/Hockey Rule Finder";
