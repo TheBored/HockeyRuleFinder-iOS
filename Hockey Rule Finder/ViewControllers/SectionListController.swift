@@ -7,11 +7,12 @@
 //
 
 import UIKit
+import SQLite
 
 class SectionListController: UITableViewController {
     
     @IBOutlet weak var menuButton: UIBarButtonItem!
-    let tableData = ["B1", "B2", "B3"];
+    var tableData:[String] = [];
     var selectedIndex = 0;
     
     override func viewDidLoad() {
@@ -22,6 +23,20 @@ class SectionListController: UITableViewController {
             menuButton.target = self.revealViewController()
             menuButton.action = "revealToggle:"
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
+        }
+        
+        
+        //Quick hack for testing SQLite
+        
+        let path = NSBundle.mainBundle().pathForResource("rules", ofType: "sqlite")
+        let db = Database(path!, readonly: true)
+        
+        let sections = db["section"];
+        let league_id = Expression<Int64>("league_id");
+        let section_name = Expression<String>("section_name");
+        
+        for section in sections.select(section_name).filter(league_id == 1) {
+            tableData.append(section[section_name]);
         }
     }
     
