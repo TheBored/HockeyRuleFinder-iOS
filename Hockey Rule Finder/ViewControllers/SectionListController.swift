@@ -12,7 +12,7 @@ import SQLite
 class SectionListController: UITableViewController {
     
     @IBOutlet weak var menuButton: UIBarButtonItem!
-    var tableData:[String] = [];
+    var tableData = [Section]();
     var selectedIndex = 0;
     
     override func viewDidLoad() {
@@ -24,20 +24,9 @@ class SectionListController: UITableViewController {
             menuButton.action = "revealToggle:"
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
-        
-        
+  
         //Quick hack for testing SQLite
-        
-        let path = NSBundle.mainBundle().pathForResource("rules", ofType: "sqlite")
-        let db = Database(path!, readonly: true)
-        
-        let sections = db["section"];
-        let league_id = Expression<Int64>("league_id");
-        let section_name = Expression<String>("section_name");
-        
-        for section in sections.select(section_name).filter(league_id == 1) {
-            tableData.append(section[section_name]);
-        }
+        tableData = RuleDataServices.GetAllSections(1);
     }
     
     override func didReceiveMemoryWarning() {
@@ -52,7 +41,8 @@ class SectionListController: UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell:UITableViewCell = UITableViewCell(style:UITableViewCellStyle.Default, reuseIdentifier:"main");
-        cell.textLabel!.text = tableData[indexPath.row];
+        var s: Section = tableData[indexPath.row];
+        cell.textLabel!.text = s.Name;
         return cell;
     }
     
@@ -67,7 +57,8 @@ class SectionListController: UITableViewController {
         if (segue.identifier == "to_rule_list") {
             if let viewController: RuleListController = segue.destinationViewController as? RuleListController {
                 let cell:UITableViewCell = sender as! UITableViewCell;
-                viewController.prefix = tableData[selectedIndex];
+                var s: Section = tableData[selectedIndex];
+                viewController.prefix = s.Name;
             }
         }
     }
