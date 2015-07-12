@@ -1,3 +1,6 @@
 [submodule "Externals/SQLite.swift"]
 	path = Externals/SQLite.swift
 	url = git://github.com/stephencelis/SQLite.swift.git
+[submodule "Externals/SWRevealViewController"]
+	path = Externals/SWRevealViewController
+	url = https://github.com/John-Lluch/SWRevealViewController.git

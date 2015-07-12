@@ -10,21 +10,7 @@
 	<string>46</string>
 	<key>objects</key>
 	<dict>
-		<key>D34D03B11B38E7DF0080CC62</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>D39321C21B23795900998B33</string>
-				<string>D34D03B21B38E7EC0080CC62</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>Externals</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D34D03B21B38E7EC0080CC62</key>
+		<key>D30161CE1B52154D003205AA</key>
 		<dict>
 			<key>isa</key>
 			<string>PBXFileReference</string>
@@ -33,18 +19,18 @@
 			<key>name</key>
 			<string>SQLite.xcodeproj</string>
 			<key>path</key>
-			<string>../../Externals/SQLite.swift/SQLite.xcodeproj</string>
+			<string>Externals/SQLite.swift/SQLite.xcodeproj</string>
 			<key>sourceTree</key>
 			<string>SOURCE_ROOT</string>
 		</dict>
-		<key>D34D03B31B38E7EC0080CC62</key>
+		<key>D30161CF1B52154D003205AA</key>
 		<dict>
 			<key>children</key>
 			<array>
-				<string>D34D03BB1B38E7EC0080CC62</string>
-				<string>D34D03BD1B38E7EC0080CC62</string>
-				<string>D34D03BF1B38E7EC0080CC62</string>
-				<string>D34D03C11B38E7EC0080CC62</string>
+				<string>D30161D71B52154D003205AA</string>
+				<string>D30161D91B52154D003205AA</string>
+				<string>D30161DB1B52154D003205AA</string>
+				<string>D30161DD1B52154D003205AA</string>
 			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
@@ -53,10 +39,10 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>D34D03BA1B38E7EC0080CC62</key>
+		<key>D30161D61B52154D003205AA</key>
 		<dict>
 			<key>containerPortal</key>
-			<string>D34D03B21B38E7EC0080CC62</string>
+			<string>D30161CE1B52154D003205AA</string>
 			<key>isa</key>
 			<string>PBXContainerItemProxy</string>
 			<key>proxyType</key>
@@ -66,7 +52,7 @@
 			<key>remoteInfo</key>
 			<string>SQLite</string>
 		</dict>
-		<key>D34D03BB1B38E7EC0080CC62</key>
+		<key>D30161D71B52154D003205AA</key>
 		<dict>
 			<key>fileType</key>
 			<string>wrapper.framework</string>
@@ -75,14 +61,14 @@
 			<key>path</key>
 			<string>SQLite.framework</string>
 			<key>remoteRef</key>
-			<string>D34D03BA1B38E7EC0080CC62</string>
+			<string>D30161D61B52154D003205AA</string>
 			<key>sourceTree</key>
 			<string>BUILT_PRODUCTS_DIR</string>
 		</dict>
-		<key>D34D03BC1B38E7EC0080CC62</key>
+		<key>D30161D81B52154D003205AA</key>
 		<dict>
 			<key>containerPortal</key>
-			<string>D34D03B21B38E7EC0080CC62</string>
+			<string>D30161CE1B52154D003205AA</string>
 			<key>isa</key>
 			<string>PBXContainerItemProxy</string>
 			<key>proxyType</key>
@@ -92,7 +78,7 @@
 			<key>remoteInfo</key>
 			<string>SQLite Tests</string>
 		</dict>
-		<key>D34D03BD1B38E7EC0080CC62</key>
+		<key>D30161D91B52154D003205AA</key>
 		<dict>
 			<key>fileType</key>
 			<string>wrapper.cfbundle</string>
@@ -101,14 +87,14 @@
 			<key>path</key>
 			<string>SQLite Tests.xctest</string>
 			<key>remoteRef</key>
-			<string>D34D03BC1B38E7EC0080CC62</string>
+			<string>D30161D81B52154D003205AA</string>
 			<key>sourceTree</key>
 			<string>BUILT_PRODUCTS_DIR</string>
 		</dict>
-		<key>D34D03BE1B38E7EC0080CC62</key>
+		<key>D30161DA1B52154D003205AA</key>
 		<dict>
 			<key>containerPortal</key>
-			<string>D34D03B21B38E7EC0080CC62</string>
+			<string>D30161CE1B52154D003205AA</string>
 			<key>isa</key>
 			<string>PBXContainerItemProxy</string>
 			<key>proxyType</key>
@@ -118,7 +104,7 @@
 			<key>remoteInfo</key>
 			<string>SQLiteCipher</string>
 		</dict>
-		<key>D34D03BF1B38E7EC0080CC62</key>
+		<key>D30161DB1B52154D003205AA</key>
 		<dict>
 			<key>fileType</key>
 			<string>wrapper.framework</string>
@@ -127,14 +113,14 @@
 			<key>path</key>
 			<string>SQLite.framework</string>
 			<key>remoteRef</key>
-			<string>D34D03BE1B38E7EC0080CC62</string>
+			<string>D30161DA1B52154D003205AA</string>
 			<key>sourceTree</key>
 			<string>BUILT_PRODUCTS_DIR</string>
 		</dict>
-		<key>D34D03C01B38E7EC0080CC62</key>
+		<key>D30161DC1B52154D003205AA</key>
 		<dict>
 			<key>containerPortal</key>
-			<string>D34D03B21B38E7EC0080CC62</string>
+			<string>D30161CE1B52154D003205AA</string>
 			<key>isa</key>
 			<string>PBXContainerItemProxy</string>
 			<key>proxyType</key>
@@ -144,7 +130,7 @@
 			<key>remoteInfo</key>
 			<string>SQLiteCipher Tests</string>
 		</dict>
-		<key>D34D03C11B38E7EC0080CC62</key>
+		<key>D30161DD1B52154D003205AA</key>
 		<dict>
 			<key>fileType</key>
 			<string>wrapper.cfbundle</string>
@@ -153,38 +139,76 @@
 			<key>path</key>
 			<string>SQLiteCipher Tests.xctest</string>
 			<key>remoteRef</key>
-			<string>D34D03C01B38E7EC0080CC62</string>
+			<string>D30161DC1B52154D003205AA</string>
 			<key>sourceTree</key>
 			<string>BUILT_PRODUCTS_DIR</string>
 		</dict>
-		<key>D34D03C21B38E80E0080CC62</key>
+		<key>D30161DE1B521554003205AA</key>
 		<dict>
-			<key>containerPortal</key>
-			<string>D34D03B21B38E7EC0080CC62</string>
+			<key>children</key>
+			<array>
+				<string>D30161DF1B521561003205AA</string>
+				<string>D30161E01B521561003205AA</string>
+			</array>
 			<key>isa</key>
-			<string>PBXContainerItemProxy</string>
-			<key>proxyType</key>
-			<string>1</string>
-			<key>remoteGlobalIDString</key>
-			<string>DC3773F219C8CBB3004FCF85</string>
-			<key>remoteInfo</key>
-			<string>SQLite</string>
-		</dict>
-		<key>D34D03C31B38E80E0080CC62</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
+			<string>PBXGroup</string>
 			<key>name</key>
-			<string>SQLite</string>
-			<key>targetProxy</key>
-			<string>D34D03C21B38E80E0080CC62</string>
+			<string>SWRevealViewController</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
-		<key>D34D03C41B38E81B0080CC62</key>
+		<key>D30161DF1B521561003205AA</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>SWRevealViewController.h</string>
+			<key>path</key>
+			<string>Externals/SWRevealViewController/SWRevealViewController/SWRevealViewController.h</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>D30161E01B521561003205AA</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>name</key>
+			<string>SWRevealViewController.m</string>
+			<key>path</key>
+			<string>Externals/SWRevealViewController/SWRevealViewController/SWRevealViewController.m</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>D30161E11B521561003205AA</key>
 		<dict>
 			<key>fileRef</key>
-			<string>D34D03BB1B38E7EC0080CC62</string>
+			<string>D30161E01B521561003205AA</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
+		</dict>
+		<key>D34D03B11B38E7DF0080CC62</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>D30161DE1B521554003205AA</string>
+				<string>D30161CE1B52154D003205AA</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Externals</string>
+			<key>path</key>
+			<string>Hockey Rule Finder/Externals</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
 		<key>D34D03C51B38E8260080CC62</key>
 		<dict>
@@ -195,28 +219,11 @@
 			<key>dstSubfolderSpec</key>
 			<string>10</string>
 			<key>files</key>
-			<array>
-				<string>D34D03C61B38E8400080CC62</string>
-			</array>
+			<array/>
 			<key>isa</key>
 			<string>PBXCopyFilesBuildPhase</string>
 			<key>runOnlyForDeploymentPostprocessing</key>
 			<string>0</string>
-		</dict>
-		<key>D34D03C61B38E8400080CC62</key>
-		<dict>
-			<key>fileRef</key>
-			<string>D34D03BB1B38E7EC0080CC62</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict>
-				<key>ATTRIBUTES</key>
-				<array>
-					<string>CodeSignOnCopy</string>
-					<string>RemoveHeadersOnCopy</string>
-				</array>
-			</dict>
 		</dict>
 		<key>D3771CB61B2B81D60027DCCF</key>
 		<dict>
@@ -262,6 +269,7 @@
 		<dict>
 			<key>children</key>
 			<array>
+				<string>D34D03B11B38E7DF0080CC62</string>
 				<string>D393219F1B23778F00998B33</string>
 				<string>D39321B51B23778F00998B33</string>
 				<string>D393219E1B23778F00998B33</string>
@@ -320,9 +328,9 @@
 			<array>
 				<dict>
 					<key>ProductGroup</key>
-					<string>D34D03B31B38E7EC0080CC62</string>
+					<string>D30161CF1B52154D003205AA</string>
 					<key>ProjectRef</key>
-					<string>D34D03B21B38E7EC0080CC62</string>
+					<string>D30161CE1B52154D003205AA</string>
 				</dict>
 			</array>
 			<key>projectRoot</key>
@@ -361,9 +369,9 @@
 				<string>D3B6A4F61B52051F009D01C2</string>
 				<string>D3B6A4F81B52063F009D01C2</string>
 				<string>D3771CB71B2B81D60027DCCF</string>
+				<string>D30161E11B521561003205AA</string>
 				<string>D39321A31B23778F00998B33</string>
 				<string>D3B6A4F31B5201C5009D01C2</string>
-				<string>D39321C61B23797400998B33</string>
 			</array>
 			<key>isa</key>
 			<string>PBXSourcesBuildPhase</string>
@@ -375,9 +383,7 @@
 			<key>buildActionMask</key>
 			<string>2147483647</string>
 			<key>files</key>
-			<array>
-				<string>D34D03C41B38E81B0080CC62</string>
-			</array>
+			<array/>
 			<key>isa</key>
 			<string>PBXFrameworksBuildPhase</string>
 			<key>runOnlyForDeploymentPostprocessing</key>
@@ -413,9 +419,7 @@
 			<key>buildRules</key>
 			<array/>
 			<key>dependencies</key>
-			<array>
-				<string>D34D03C31B38E80E0080CC62</string>
-			</array>
+			<array/>
 			<key>isa</key>
 			<string>PBXNativeTarget</string>
 			<key>name</key>
@@ -461,7 +465,6 @@
 				<string>D3B6A4F41B520513009D01C2</string>
 				<string>D3B6A4F11B5201A5009D01C2</string>
 				<string>D3B6A4EB1B4F5489009D01C2</string>
-				<string>D34D03B11B38E7DF0080CC62</string>
 				<string>D39321C71B237B4000998B33</string>
 				<string>D39321A21B23778F00998B33</string>
 				<string>D39321A61B23778F00998B33</string>
@@ -1048,55 +1051,6 @@
 			<key>name</key>
 			<string>Release</string>
 		</dict>
-		<key>D39321C21B23795900998B33</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>D39321C41B23797400998B33</string>
-				<string>D39321C51B23797400998B33</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>SWRevealViewController</string>
-			<key>path</key>
-			<string>SWRevealViewController</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D39321C41B23797400998B33</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>SWRevealViewController.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D39321C51B23797400998B33</key>
-		<dict>
-			<key>fileEncoding</key>
-			<string>4</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>SWRevealViewController.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>D39321C61B23797400998B33</key>
-		<dict>
-			<key>fileRef</key>
-			<string>D39321C51B23797400998B33</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
 		<key>D39321C71B237B4000998B33</key>
 		<dict>
 			<key>children</key>
@@ -1246,8 +1200,6 @@
 			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
-			<key>name</key>
-			<string>DataAccess</string>
 			<key>path</key>
 			<string>DataAccess</string>
 			<key>sourceTree</key>
@@ -1281,8 +1233,6 @@
 			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Entitites</string>
 			<key>path</key>
 			<string>Entitites</string>
 			<key>sourceTree</key>
