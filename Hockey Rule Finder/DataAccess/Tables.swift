@@ -12,7 +12,7 @@ import Foundation
 import SQLite
 
 class LeagueTbl {
-    static let league_id = Expression<Int64>("league_id");
+    static let league_id = Expression<Int>("league_id");
     static let name = Expression<String>("name");
     static let acronym = Expression<String>("acronym");
 }
@@ -26,12 +26,12 @@ class SectionTbl {
 }
 
 class RuleTbl {
-    static let rule_id = Expression<Int64>("rule_id");
-    static let league_id = Expression<Int64>("league_id");
-    static let section_id = Expression<Int64>("section_id");
-    static let parent_rule_id = Expression<Int64>("parent_rule_id");
+    static let rule_id = Expression<Int>("rule_id");
+    static let league_id = Expression<Int>("league_id");
+    static let section_id = Expression<Int>("section_id");
+    static let parent_rule_id = Expression<Int?>("parent_rule_id");
     static let rule_num = Expression<String>("rule_num");
     static let rule_name = Expression<String>("rule_name");
     static let text = Expression<String>("text");
-    static let rule_order = Expression<String>("rule_order");
+    static let rule_order = Expression<Int>("rule_order");
 }

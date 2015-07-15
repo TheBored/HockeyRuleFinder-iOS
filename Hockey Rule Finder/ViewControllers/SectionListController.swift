@@ -42,7 +42,7 @@ class SectionListController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell:UITableViewCell = UITableViewCell(style:UITableViewCellStyle.Default, reuseIdentifier:"main");
         var s: Section = tableData[indexPath.row];
-        cell.textLabel!.text = s.Name;
+        cell.textLabel!.text = s.name;
         return cell;
     }
     
@@ -58,7 +58,7 @@ class SectionListController: UITableViewController {
             if let viewController: RuleListController = segue.destinationViewController as? RuleListController {
                 let cell:UITableViewCell = sender as! UITableViewCell;
                 var s: Section = tableData[selectedIndex];
-                viewController.prefix = s.Name;
+                viewController.sectionId = s.sectionId;
             }
         }
     }

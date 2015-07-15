@@ -9,9 +9,9 @@
 class RuleListController: UITableViewController {
     
     @IBOutlet weak var menuButton: UIBarButtonItem!
-    let tableData = ["R1", "R2", "R3"];
+    var tableData = [Rule]();
     var selectedIndex = 0;
-    var prefix = "";
+    var sectionId = -1;
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +22,8 @@ class RuleListController: UITableViewController {
             menuButton.action = "revealToggle:"
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
+        
+        tableData = RuleDataServices.GetRulesForSection(sectionId);
     }
     
     override func didReceiveMemoryWarning() {
@@ -36,7 +38,7 @@ class RuleListController: UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell:UITableViewCell = UITableViewCell(style:UITableViewCellStyle.Default, reuseIdentifier:"main");
-        cell.textLabel!.text = prefix + " " + tableData[indexPath.row];
+        cell.textLabel!.text = tableData[indexPath.row].ruleNum + " " + tableData[indexPath.row].ruleName;
         return cell;
     }
     
@@ -50,7 +52,7 @@ class RuleListController: UITableViewController {
         if (segue.identifier == "to_rule_detail") {
             if let viewController: RuleDetailController = segue.destinationViewController as? RuleDetailController {
                 let cell:UITableViewCell = sender as! UITableViewCell;
-                viewController.prefix = tableData[selectedIndex];
+                viewController.ruleId = tableData[selectedIndex].ruleId;
             }
         }
     }

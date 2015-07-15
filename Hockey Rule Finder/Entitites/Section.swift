@@ -7,19 +7,20 @@
 //
 
 import Foundation
+import SQLite
 
 class Section {
-    var SectionId: Int;
-    var LeagueId: Int;
-    var Num: String;
-    var Name: String;
-    var Order: Int;
+    var sectionId: Int;
+    var leagueId: Int;
+    var num: String;
+    var name: String;
+    var order: Int;
     
-    init(sectionid: Int, leagueid:Int, num: String, name: String, order: Int) {
-        SectionId = sectionid;
-        LeagueId = leagueid;
-        Num = num;
-        Name = name;
-        Order = order;
+    init(dbRow: Row) {
+        sectionId = dbRow[SectionTbl.section_id];
+        leagueId = dbRow[SectionTbl.league_id];
+        num = dbRow[SectionTbl.section_num];
+        name = dbRow[SectionTbl.section_name];
+        order = dbRow[SectionTbl.section_order];
     }
 }
