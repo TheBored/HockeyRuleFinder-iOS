@@ -9,7 +9,7 @@
 class RuleDetailController: UITableViewController {
     
     @IBOutlet weak var menuButton: UIBarButtonItem!
-    let tableData = ["D1", "D2", "D3"];
+    var tableData = [Rule]();
     var ruleId = -1;
     
     override func viewDidLoad() {
@@ -35,7 +35,11 @@ class RuleDetailController: UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell:UITableViewCell = UITableViewCell(style:UITableViewCellStyle.Default, reuseIdentifier:"main");
-        cell.textLabel!.text = tableData[indexPath.row];
+        cell.textLabel!.text = tableData[indexPath.row].text;
         return cell;
+    }
+    
+    func setData(data: [Rule]) {
+        tableData = data;
     }
 }

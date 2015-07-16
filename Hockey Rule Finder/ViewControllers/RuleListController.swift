@@ -52,7 +52,7 @@ class RuleListController: UITableViewController {
         if (segue.identifier == "to_rule_detail") {
             if let viewController: RuleDetailController = segue.destinationViewController as? RuleDetailController {
                 let cell:UITableViewCell = sender as! UITableViewCell;
-                viewController.ruleId = tableData[selectedIndex].ruleId;
+                viewController.setData(tableData[selectedIndex].subRules);
             }
         }
     }
