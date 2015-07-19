@@ -11,7 +11,7 @@ import SQLite
 
 class RuleDataServices: BaseDataServices {
     
-    static func GetAllSections(leagueId: Int) -> [Section] {
+    static func GetSectionsForLeague(leagueId: Int) -> [Section] {
         var response = [Section]();
         var sectionTable = GetTable("section");
         for s in sectionTable.filter(SectionTbl.league_id == leagueId) {
@@ -29,6 +29,16 @@ class RuleDataServices: BaseDataServices {
             response.append(newRule);
         }
         return MakeTree(response);
+    }
+    
+    static func GetPenaltiesForLeague(leagueId: Int) -> [Penalty] {
+        var response = [Penalty]();
+        var penaltyTable = GetTable("call");
+        for p in penaltyTable.filter(CallTbl.league_id == leagueId) {
+            let newPenalty = Penalty(dbRow: p);
+            response.append(newPenalty);
+        }
+        return response;
     }
     
     //Input: flat list of rules. Output: heirarchy of rules, where parentless rules are the first level of the list.

@@ -9,7 +9,7 @@
 class QuickReferenceController: UITableViewController {
     
     @IBOutlet weak var menuButton: UIBarButtonItem!
-    let tableData = ["Q1", "Q2", "Q3"];
+    var tableData = [Penalty]();
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +20,8 @@ class QuickReferenceController: UITableViewController {
             menuButton.action = "revealToggle:"
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
+        
+        tableData = RuleDataServices.GetPenaltiesForLeague(1);
     }
     
     override func didReceiveMemoryWarning() {
@@ -34,7 +36,7 @@ class QuickReferenceController: UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell:UITableViewCell = UITableViewCell(style:UITableViewCellStyle.Default, reuseIdentifier:"cell");
-        cell.textLabel!.text = tableData[indexPath.row];
+        cell.textLabel!.text = tableData[indexPath.row].name;
         return cell;
     }
     

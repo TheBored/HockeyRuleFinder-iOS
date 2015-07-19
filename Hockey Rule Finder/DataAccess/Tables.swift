@@ -36,6 +36,15 @@ class RuleTbl {
     static let rule_order = Expression<Int>("rule_order");
 }
 
+class CallTbl {
+    static let call_id = Expression<Int>("call_id");
+    static let league_id = Expression<Int>("league_id");
+    static let rule_id = Expression<Int?>("rule_id");
+    static let name = Expression<String>("name");
+    static let desc = Expression<String>("desc");
+    static let img = Expression<String>("img");
+}
+
 class OfficialTbl {
     static let official_id = Expression<Int>("official_id");
     static let league_id = Expression<Int>("league_id");

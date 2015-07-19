@@ -26,7 +26,7 @@ class SectionListController: UITableViewController {
         }
   
         //Quick hack for testing SQLite
-        tableData = RuleDataServices.GetAllSections(1);
+        tableData = RuleDataServices.GetSectionsForLeague(1);
     }
     
     override func didReceiveMemoryWarning() {
