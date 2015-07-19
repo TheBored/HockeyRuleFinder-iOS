@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		D30161E11B521561003205AA /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D30161E01B521561003205AA /* SWRevealViewController.m */; };
+		D3068D461B5C12F600AB7A5C /* Official.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3068D451B5C12F600AB7A5C /* Official.swift */; };
+		D3068D4C1B5C15B700AB7A5C /* BaseDataServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3068D4B1B5C15B700AB7A5C /* BaseDataServices.swift */; };
+		D3068D4E1B5C162900AB7A5C /* OfficialDataServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3068D4D1B5C162900AB7A5C /* OfficialDataServices.swift */; };
+		D3068D501B5C17DE00AB7A5C /* OfficialListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3068D4F1B5C17DE00AB7A5C /* OfficialListViewController.swift */; };
 		D3771CB71B2B81D60027DCCF /* RuleListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3771CB61B2B81D60027DCCF /* RuleListController.swift */; };
 		D377F4581B55F37800B7EEBA /* Rule.swift in Sources */ = {isa = PBXBuildFile; fileRef = D377F4571B55F37800B7EEBA /* Rule.swift */; };
 		D383680A1B2DF177006BE1FA /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38368091B2DF177006BE1FA /* SearchController.swift */; };
@@ -80,6 +84,10 @@
 		D30161CE1B52154D003205AA /* SQLite.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SQLite.xcodeproj; path = Externals/SQLite.swift/SQLite.xcodeproj; sourceTree = SOURCE_ROOT; };
 		D30161DF1B521561003205AA /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = Externals/SWRevealViewController/SWRevealViewController/SWRevealViewController.h; sourceTree = SOURCE_ROOT; };
 		D30161E01B521561003205AA /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = Externals/SWRevealViewController/SWRevealViewController/SWRevealViewController.m; sourceTree = SOURCE_ROOT; };
+		D3068D451B5C12F600AB7A5C /* Official.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Official.swift; sourceTree = "<group>"; };
+		D3068D4B1B5C15B700AB7A5C /* BaseDataServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseDataServices.swift; sourceTree = "<group>"; };
+		D3068D4D1B5C162900AB7A5C /* OfficialDataServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfficialDataServices.swift; sourceTree = "<group>"; };
+		D3068D4F1B5C17DE00AB7A5C /* OfficialListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfficialListViewController.swift; sourceTree = "<group>"; };
 		D3771CB61B2B81D60027DCCF /* RuleListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RuleListController.swift; sourceTree = "<group>"; };
 		D377F4571B55F37800B7EEBA /* Rule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rule.swift; sourceTree = "<group>"; };
 		D38368091B2DF177006BE1FA /* SearchController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
@@ -221,6 +229,7 @@
 				D3771CB61B2B81D60027DCCF /* RuleListController.swift */,
 				D38368091B2DF177006BE1FA /* SearchController.swift */,
 				D39C42E11B2DFE7F004BCD58 /* RuleDetailController.swift */,
+				D3068D4F1B5C17DE00AB7A5C /* OfficialListViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -238,6 +247,8 @@
 			children = (
 				D3B6A4F21B5201C5009D01C2 /* Tables.swift */,
 				D3B6A4F71B52063F009D01C2 /* RuleDataServices.swift */,
+				D3068D4B1B5C15B700AB7A5C /* BaseDataServices.swift */,
+				D3068D4D1B5C162900AB7A5C /* OfficialDataServices.swift */,
 			);
 			path = DataAccess;
 			sourceTree = "<group>";
@@ -247,6 +258,7 @@
 			children = (
 				D3B6A4F51B52051F009D01C2 /* Section.swift */,
 				D377F4571B55F37800B7EEBA /* Rule.swift */,
+				D3068D451B5C12F600AB7A5C /* Official.swift */,
 			);
 			path = Entitites;
 			sourceTree = "<group>";
@@ -392,13 +404,17 @@
 			files = (
 				D39321CB1B2A350A00998B33 /* MenuController.swift in Sources */,
 				D39321CD1B2A5D7300998B33 /* QuickReferenceController.swift in Sources */,
+				D3068D4C1B5C15B700AB7A5C /* BaseDataServices.swift in Sources */,
 				D39321C91B237B6000998B33 /* SectionListController.swift in Sources */,
 				D383680A1B2DF177006BE1FA /* SearchController.swift in Sources */,
 				D39C42E21B2DFE7F004BCD58 /* RuleDetailController.swift in Sources */,
+				D3068D501B5C17DE00AB7A5C /* OfficialListViewController.swift in Sources */,
 				D3B6A4F61B52051F009D01C2 /* Section.swift in Sources */,
 				D3B6A4F81B52063F009D01C2 /* RuleDataServices.swift in Sources */,
 				D3771CB71B2B81D60027DCCF /* RuleListController.swift in Sources */,
+				D3068D4E1B5C162900AB7A5C /* OfficialDataServices.swift in Sources */,
 				D30161E11B521561003205AA /* SWRevealViewController.m in Sources */,
+				D3068D461B5C12F600AB7A5C /* Official.swift in Sources */,
 				D377F4581B55F37800B7EEBA /* Rule.swift in Sources */,
 				D39321A31B23778F00998B33 /* AppDelegate.swift in Sources */,
 				D3B6A4F31B5201C5009D01C2 /* Tables.swift in Sources */,

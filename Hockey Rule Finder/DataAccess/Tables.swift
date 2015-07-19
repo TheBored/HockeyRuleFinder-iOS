@@ -35,3 +35,18 @@ class RuleTbl {
     static let text = Expression<String>("text");
     static let rule_order = Expression<Int>("rule_order");
 }
+
+class OfficialTbl {
+    static let official_id = Expression<Int>("official_id");
+    static let league_id = Expression<Int>("league_id");
+    static let number = Expression<Int>("number");
+    static let name = Expression<String>("name");
+    static let league_desc = Expression<String>("league_desc");
+    static let member_since = Expression<String>("member_since");
+    static let count_reg_season = Expression<String>("count_reg_season");
+    static let count_playoffs = Expression<String>("count_playoffs");
+    static let first_reg_season = Expression<String>("first_reg_season");
+    static let first_reg_game = Expression<String>("first_reg_game");
+    static let first_playoff_season = Expression<String>("first_playoff_season");
+    static let first_playoff_game = Expression<String>("first_playoff_game");
+}

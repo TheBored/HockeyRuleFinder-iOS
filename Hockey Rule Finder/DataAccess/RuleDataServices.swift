@@ -9,18 +9,12 @@
 import Foundation
 import SQLite
 
-class RuleDataServices {
-    static let DB_PATH = NSBundle.mainBundle().pathForResource("rules", ofType: "sqlite")!;
+class RuleDataServices: BaseDataServices {
     
-    static func GetTable(table_name: String) -> Query {
-        let db = Database(DB_PATH, readonly: true);
-        return db[table_name];
-    }
-    
-    static func GetAllSections(leagueid: Int) -> [Section] {
+    static func GetAllSections(leagueId: Int) -> [Section] {
         var response = [Section]();
         var sectionTable = GetTable("section");
-        for s in sectionTable.filter(SectionTbl.league_id == 1) {
+        for s in sectionTable.filter(SectionTbl.league_id == leagueId) {
             let newSec = Section(dbRow: s);
             response.append(newSec);
         }
