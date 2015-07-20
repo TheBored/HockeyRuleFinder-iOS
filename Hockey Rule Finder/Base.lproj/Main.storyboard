@@ -258,18 +258,52 @@
             </objects>
             <point key="canvasLocation" x="2244" y="656"/>
         </scene>
-        <!--Title-->
+        <!--Search-->
         <scene sceneID="Xp8-qY-E0s">
             <objects>
-                <viewController id="huN-pW-tYL" customClass="SearchController" customModule="Hockey_Rule_Finder" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="huN-pW-tYL" userLabel="Search" customClass="SearchController" customModule="Hockey_Rule_Finder" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="p1L-NP-zNV"/>
-                        <viewControllerLayoutGuide type="bottom" id="C3Q-B8-IbW"/>
+                        <viewControllerLayoutGuide type="top" id="WoU-rJ-DBZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="eKj-z8-gXo"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Zav-Ma-dGu">
+                    <view key="view" contentMode="scaleToFill" id="MtD-Ln-THs">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="1Rk-2Q-6Od">
+                                <rect key="frame" x="0.0" y="64" width="600" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="huN-pW-tYL" id="iJR-MN-ilj"/>
+                                </connections>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Ioy-nv-u85">
+                                <rect key="frame" x="0.0" y="108" width="600" height="448"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="LDR-oN-VOs">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LDR-oN-VOs" id="1HZ-DZ-UCQ">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="huN-pW-tYL" id="bP8-pU-F7v"/>
+                                    <outlet property="delegate" destination="huN-pW-tYL" id="WaM-3H-OHn"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ioy-nv-u85" firstAttribute="top" secondItem="1Rk-2Q-6Od" secondAttribute="bottom" id="3cI-SJ-hzq"/>
+                            <constraint firstItem="1Rk-2Q-6Od" firstAttribute="top" secondItem="WoU-rJ-DBZ" secondAttribute="bottom" id="95L-JP-S34"/>
+                            <constraint firstItem="eKj-z8-gXo" firstAttribute="top" secondItem="Ioy-nv-u85" secondAttribute="bottom" id="C9F-6b-flz"/>
+                            <constraint firstAttribute="trailing" secondItem="Ioy-nv-u85" secondAttribute="trailing" id="RNa-3B-9Sw"/>
+                            <constraint firstAttribute="trailing" secondItem="1Rk-2Q-6Od" secondAttribute="trailing" id="VCE-d5-byS"/>
+                            <constraint firstItem="Ioy-nv-u85" firstAttribute="leading" secondItem="MtD-Ln-THs" secondAttribute="leading" id="com-i9-kyP"/>
+                            <constraint firstItem="1Rk-2Q-6Od" firstAttribute="leading" secondItem="MtD-Ln-THs" secondAttribute="leading" id="sgi-Dk-Ta6"/>
+                        </constraints>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Title" id="9cd-Vv-wBi">
@@ -278,6 +312,7 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="menuButton" destination="Lv2-n8-alS" id="U4i-dR-cy5"/>
+                        <outlet property="searchBar" destination="1Rk-2Q-6Od" id="oAI-26-c86"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1lq-iG-uhF" userLabel="First Responder" sceneMemberID="firstResponder"/>
