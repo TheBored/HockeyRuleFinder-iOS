@@ -41,6 +41,16 @@ class RuleDataServices: BaseDataServices {
         return response;
     }
     
+    static func GetRules(leagueId: Int, sectionId: Int?, ruleIds: [Int], returnFlat: Bool) -> [Rule] {
+        Exceptions.ThrowNotImplemented();
+        return [Rule]();
+    }
+    
+    static func FindRulesWithText(leagueId: Int, text: String) -> [Int] {
+        Exceptions.ThrowNotImplemented();
+        return [Int]();
+    }
+    
     //Input: flat list of rules. Output: heirarchy of rules, where parentless rules are the first level of the list.
     private static func MakeTree(inputList: [Rule]) -> [Rule] {
         var flatList = inputList;
