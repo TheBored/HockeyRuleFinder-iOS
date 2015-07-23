@@ -13,7 +13,7 @@ class SearchController: UIViewController {
     @IBOutlet weak var menuButton: UIBarButtonItem!
     var searchActive = false;
     var searchText = "";
-    var tableData = [Rule]();
+    var tableData = [SearchResult]();
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +25,8 @@ class SearchController: UIViewController {
             self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         }
         
-        tableData = RuleDataServices.GetRulesForSection(1); //Placeholder, to test that the table works.
+        var searcher = RuleSearcher(leagueId: 1);
+        tableData = searcher.searchRules("boarding", leagueId: 1);
     }
     
     func search() {
@@ -65,7 +66,7 @@ class SearchController: UIViewController {
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell:UITableViewCell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath:indexPath) as! UITableViewCell;
-        cell.textLabel!.text = tableData[indexPath.row].ruleName;
+        cell.textLabel!.text = tableData[indexPath.row].highlightText;
         return cell;
     }
 }

@@ -70,7 +70,7 @@ class RuleSearcher {
         var possibleReferences = RuleDataServices.GetRules(leagueId, sectionId: nil, ruleIds: directReferences, returnFlat: false);
         
         for parent in possibleReferences {
-            results.append(getResult(parent, searchText: text)!);
+            results.append(getResult(parent, searchText: text));
         }
         
         //Lastly, sort ze list.
@@ -79,8 +79,64 @@ class RuleSearcher {
         return results;
     }
     
-    private func getResult (var r: Rule, var searchText: String) -> SearchResult? { //NOTE: WHen this is implemented, be sure to remove the nullable return value. Should be mandatory.
-        Exceptions.ThrowNotImplemented();
-        return nil;
+    static func getHighlightedText(var input: String, highlightText: String) -> String {
+        if highlightText.isEmpty {
+            return input;
+        }
+        
+        var error: NSError?;
+        var matcher = NSRegularExpression(pattern: highlightText, options: .CaseInsensitive, error: &error);
+        var replaceFormat = "<b><font color=\"Red\">$1</font></b>";
+        var inputMutable = NSMutableString(string: input);
+        if let response = matcher?.replaceMatchesInString(inputMutable, options: NSMatchingOptions.allZeros, range: NSRange(location:0, length:count(input)), withTemplate: replaceFormat) {
+            return inputMutable as String;
+        }
+        else {
+            //Something failed here, log with Crashlytics. TODO CRASHLYTICS.
+            return input; //Failed, just return the normal text to prevent the app from crashing.
+        }
+    }
+    
+    private static func getCondensedVersion(input: String, highlightText: String) -> String {
+        var response = "";
+
+        //Remove all lines that don't contain the pattern at all.
+        var pattern = String(format: REGEX_HAS_TERM, highlightText);
+        var error: NSError?;
+        var text = input as NSString;
+        var matcher = NSRegularExpression(pattern: pattern, options: .CaseInsensitive | .DotMatchesLineSeparators, error: &error);
+        if let matches = matcher?.matchesInString(input, options: NSMatchingOptions.allZeros, range: NSRange(location: 0, length: text.length)) {
+            for match in matches {
+                response += text.substringWithRange(match.range!);
+            }
+        }
+        
+        Exceptions.JustMakeItWork(); //Need to rewrite this completely, converting from Java isn't going to happen here.
+        
+        
+        return response;
+    }
+    
+    private func getResult (var r: Rule, var searchText: String) -> SearchResult {
+        var allContents = "";
+        for rule in r.subRules {
+            allContents += rule.searchContents + "\n";
+        }
+        
+        //Remove all excess text. 
+        var shortVersion = RuleSearcher.getCondensedVersion(allContents, highlightText: searchText);
+        var highlightText = "";
+        
+        if shortVersion.isEmpty {
+            highlightText = "No contents";
+        }
+        else {
+            highlightText = RuleSearcher.getHighlightedText(shortVersion, highlightText: searchText);
+            highlightText = highlightText.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet());
+            highlightText = highlightText.stringByReplacingOccurrencesOfString("\n", withString: "<br /><br />", options: NSStringCompareOptions.allZeros, range: nil);
+        }
+        
+        //TODO (both iOS and Android): GET REAL COUNT BELOW.
+        return SearchResult(rMatch:r, sMatch:sections[r.sectionId]!, count:0, highlight:highlightText);
     }
 }

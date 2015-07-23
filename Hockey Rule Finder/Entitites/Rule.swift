@@ -19,6 +19,8 @@ class Rule {
     var text: String;
     var ruleOrder: Int;
     var subRules: [Rule];
+    var searchContents: String!;
+    var htmlContents: String!;
     
     init(dbRow: Row) {
         ruleId = dbRow[RuleTbl.rule_id];
@@ -30,5 +32,19 @@ class Rule {
         text = dbRow[RuleTbl.text];
         ruleOrder = dbRow[RuleTbl.rule_order];
         subRules = [Rule]();
+        
+        //Calc the derived fields
+        searchContents = plainToSearchable();
+        htmlContents = plainToHTML();
+    }
+    
+    private func plainToSearchable() -> String {
+        Exceptions.JustMakeItWork();
+        return text;
+    }
+    
+    private func plainToHTML() -> String {
+        Exceptions.JustMakeItWork();
+        return text;
     }
 }

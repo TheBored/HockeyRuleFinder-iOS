@@ -18,4 +18,9 @@ class Exceptions {
         )
         exception.raise();
     }
+    
+    //Don't want the app to crash later, but will use this to find under developed features later.
+    static func JustMakeItWork() {
+        //Do nothing for now
+    }
 }
