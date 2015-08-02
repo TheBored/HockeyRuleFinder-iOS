@@ -86,7 +86,7 @@ class RuleSearcher {
         
         var error: NSError?;
         var matcher = NSRegularExpression(pattern: highlightText, options: .CaseInsensitive, error: &error);
-        var replaceFormat = "<b><font color=\"Red\">$1</font></b>";
+        var replaceFormat = "<b><font color=\"Red\">$0</font></b>";
         var inputMutable = NSMutableString(string: input);
         if let response = matcher?.replaceMatchesInString(inputMutable, options: NSMatchingOptions.allZeros, range: NSRange(location:0, length:count(input)), withTemplate: replaceFormat) {
             return inputMutable as String;
@@ -97,22 +97,18 @@ class RuleSearcher {
         }
     }
     
-    private static func getCondensedVersion(input: String, highlightText: String) -> String {
+    static func getCondensedVersion(input: String, highlightText: String) -> String {
+        //Future TODO: Really should do this via regular expressions, fighting that mess just proves to be a downer.
         var response = "";
-
-        //Remove all lines that don't contain the pattern at all.
-        var pattern = String(format: REGEX_HAS_TERM, highlightText);
-        var error: NSError?;
-        var text = input as NSString;
-        var matcher = NSRegularExpression(pattern: pattern, options: .CaseInsensitive | .DotMatchesLineSeparators, error: &error);
-        if let matches = matcher?.matchesInString(input, options: NSMatchingOptions.allZeros, range: NSRange(location: 0, length: text.length)) {
-            for match in matches {
-                response += text.substringWithRange(match.range!);
+        var lines = split(input) { $0 == "\n" }
+        
+        for line in lines {
+            if line.rangeOfString(highlightText) != nil {
+                response += line + "\n"
             }
         }
         
-        Exceptions.JustMakeItWork(); //Need to rewrite this completely, converting from Java isn't going to happen here.
-        
+        Exceptions.JustMakeItWork(); //Continue rewrite, need to shorten the lines that were found (e.g. "... blah blah text found...")        
         
         return response;
     }
