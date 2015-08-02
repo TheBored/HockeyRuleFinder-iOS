@@ -41,14 +41,57 @@ class RuleDataServices: BaseDataServices {
         return response;
     }
     
-    static func GetRules(leagueId: Int, sectionId: Int?, ruleIds: [Int], returnFlat: Bool) -> [Rule] {
-        Exceptions.ThrowNotImplemented();
-        return [Rule]();
+    static func GetRules(leagueId: Int?, sectionId: Int?, ruleIds: [Int], returnFlat: Bool) -> [Rule] {
+        var response = [Rule]();
+        var ruleTbl = GetTable("rule");
+        
+        //Filter on each item, if required.
+        if let lid = leagueId {
+            ruleTbl = ruleTbl.filter(RuleTbl.league_id == lid);
+        }
+        if let sid = sectionId {
+            ruleTbl = ruleTbl.filter(RuleTbl.section_id == sid);
+        }
+        
+        if (ruleIds.count > 0) {
+            //rule_id or parent_rule_id is in the provided IDs.
+            ruleTbl = ruleTbl.filter(contains(ruleIds, RuleTbl.rule_id) || contains(ruleIds, RuleTbl.parent_rule_id));
+        }
+        
+        //Convert to an array.
+        for ruleRow in ruleTbl {
+            var newRule = Rule(dbRow: ruleRow);
+            response.append(newRule);
+        }
+        
+        //Convert it to a tree, if desired.
+        if (returnFlat) {
+            return response;
+        }
+        else {
+            return MakeTree(response);
+        }
     }
     
     static func FindRulesWithText(leagueId: Int, text: String) -> [Int] {
-        Exceptions.ThrowNotImplemented();
-        return [Int]();
+        var response = [Int]();
+        
+        var ruleTbl = GetTable("Rule");
+        
+        //League Id required.
+        ruleTbl = ruleTbl.filter(RuleTbl.league_id == leagueId);
+        
+        //Search all text fields.
+        let pattern = "%" + text + "%";
+        ruleTbl = ruleTbl.filter(like(pattern, RuleTbl.text) || like(pattern, RuleTbl.rule_name) || like(pattern, RuleTbl.rule_num));
+        
+        //Get the appropriate IDs. If we get a child rule, return the parent. Otherwise just return the rule.
+        for ruleRow in ruleTbl {
+            var newId = ruleRow[RuleTbl.parent_rule_id] != nil ? ruleRow[RuleTbl.parent_rule_id]! : ruleRow[RuleTbl.rule_id];
+            response.append(newId);
+        }
+        
+        return response;
     }
     
     //Input: flat list of rules. Output: heirarchy of rules, where parentless rules are the first level of the list.
