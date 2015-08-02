@@ -7,10 +7,10 @@
 //
 
 class SearchController: UIViewController {
-    
-   
+
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var menuButton: UIBarButtonItem!
+    
     var searchActive = false;
     var searchText = "";
     var tableData = [SearchResult]();
