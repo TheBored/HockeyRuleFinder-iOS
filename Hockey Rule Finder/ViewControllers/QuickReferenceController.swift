@@ -35,8 +35,10 @@ class QuickReferenceController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell:UITableViewCell = UITableViewCell(style:UITableViewCellStyle.Default, reuseIdentifier:"cell");
-        cell.textLabel!.text = tableData[indexPath.row].name;
+        let cell = tableView.dequeueReusableCellWithIdentifier("QuickRefCell", forIndexPath: indexPath) as! QuickRefereceCell
+        cell.ruleName.text = tableData[indexPath.row].name;
+        cell.ruleDesc.text = tableData[indexPath.row].desc;
+        
         return cell;
     }
     
