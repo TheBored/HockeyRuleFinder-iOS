@@ -39,6 +39,10 @@ class QuickReferenceController: UITableViewController {
         cell.ruleName.text = tableData[indexPath.row].name;
         cell.ruleDesc.text = tableData[indexPath.row].desc;
         
+        //Get the name of the image - but get the thumbnail version.
+        let thumbnailName = tableData[indexPath.row].img.stringByReplacingOccurrencesOfString("_", withString:"_sm_");
+        cell.ruleImg.image = UIImage(named: thumbnailName);
+        
         return cell;
     }
     

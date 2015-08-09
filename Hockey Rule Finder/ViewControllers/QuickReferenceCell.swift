@@ -10,7 +10,8 @@ import Foundation
 
 class QuickRefereceCell : UITableViewCell {
     @IBOutlet weak var ruleName: UILabel!
-    @IBOutlet weak var ruleDesc: UILabel!
+    @IBOutlet weak var ruleDesc: UITextView!
+    @IBOutlet weak var ruleImg: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
