@@ -40,23 +40,23 @@ class SectionListController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell:UITableViewCell = UITableViewCell(style:UITableViewCellStyle.Default, reuseIdentifier:"main");
+        let cell:SectionListCell = tableView.dequeueReusableCellWithIdentifier("sectionListCell", forIndexPath:indexPath) as! SectionListCell;
         var s: Section = tableData[indexPath.row];
-        cell.textLabel!.text = s.name;
+        cell.sectionName!.text = s.name;
+        cell.sectionDetails!.text = "Words";
         return cell;
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         self.selectedIndex = indexPath.row;
         
-        let cell:UITableViewCell = tableView.dequeueReusableCellWithIdentifier("main", forIndexPath:indexPath) as! UITableViewCell;
+        let cell:UITableViewCell = tableView.dequeueReusableCellWithIdentifier("sectionListCell", forIndexPath:indexPath) as! SectionListCell;
         self.performSegueWithIdentifier("to_rule_list", sender: cell);
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
         if (segue.identifier == "to_rule_list") {
             if let viewController: RuleListController = segue.destinationViewController as? RuleListController {
-                let cell:UITableViewCell = sender as! UITableViewCell;
                 var s: Section = tableData[selectedIndex];
                 viewController.sectionId = s.sectionId;
             }

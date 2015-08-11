@@ -134,12 +134,36 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="main" id="NKT-Om-dws">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="sectionListCell" id="NKT-Om-dws" customClass="SectionListCell" customModule="Hockey_Rule_Finder" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NKT-Om-dws" id="ykV-fX-iJD">
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Section Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="px6-0y-ZcE">
+                                            <rect key="frame" x="8" y="8" width="109" height="27"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="right" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Section Details" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aDD-7x-E2i">
+                                            <rect key="frame" x="468" y="8" width="91" height="27"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="px6-0y-ZcE" firstAttribute="top" secondItem="ykV-fX-iJD" secondAttribute="topMargin" id="3w4-0X-3Wh"/>
+                                        <constraint firstItem="aDD-7x-E2i" firstAttribute="top" secondItem="ykV-fX-iJD" secondAttribute="topMargin" id="P3K-g7-PDg"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="aDD-7x-E2i" secondAttribute="trailing" id="PJK-7Q-15s"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="aDD-7x-E2i" secondAttribute="bottom" id="a0n-P7-pSn"/>
+                                        <constraint firstItem="px6-0y-ZcE" firstAttribute="leading" secondItem="ykV-fX-iJD" secondAttribute="leadingMargin" id="fCH-0r-OfH"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="px6-0y-ZcE" secondAttribute="bottom" id="li2-Xy-JvN"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="sectionDetails" destination="aDD-7x-E2i" id="dg3-6m-MTs"/>
+                                    <outlet property="sectionName" destination="px6-0y-ZcE" id="Jcw-5L-8qR"/>
                                     <segue destination="Dj2-p5-v3b" kind="push" identifier="to_rule_list" id="ZOM-3L-Oxx"/>
                                 </connections>
                             </tableViewCell>
@@ -160,20 +184,46 @@
             </objects>
             <point key="canvasLocation" x="3002" y="-111"/>
         </scene>
-        <!--Title-->
+        <!--Rule List Controller-->
         <scene sceneID="V08-WH-yZs">
             <objects>
-                <tableViewController id="Dj2-p5-v3b" customClass="RuleListController" customModule="Hockey_Rule_Finder" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="Dj2-p5-v3b" userLabel="Rule List Controller" customClass="RuleListController" customModule="Hockey_Rule_Finder" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="42W-12-GL3">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="main" id="yhv-ov-828">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ruleListCell" id="yhv-ov-828" customClass="RuleListCell" customModule="Hockey_Rule_Finder" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yhv-ov-828" id="kSf-xj-bIG">
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rule Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lzr-zn-b3U">
+                                            <rect key="frame" x="8" y="8" width="85" height="27"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="right" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rule Details" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qGH-Tc-JlS">
+                                            <rect key="frame" x="520" y="8" width="72" height="27"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="qGH-Tc-JlS" firstAttribute="top" secondItem="kSf-xj-bIG" secondAttribute="topMargin" id="IOv-Mf-7of"/>
+                                        <constraint firstItem="lzr-zn-b3U" firstAttribute="top" secondItem="kSf-xj-bIG" secondAttribute="topMargin" id="JA8-2s-uqp"/>
+                                        <constraint firstItem="lzr-zn-b3U" firstAttribute="leading" secondItem="kSf-xj-bIG" secondAttribute="leadingMargin" id="eZm-WO-l2L"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="qGH-Tc-JlS" secondAttribute="bottom" id="kkd-ZN-COb"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="lzr-zn-b3U" secondAttribute="bottom" id="oP8-sd-KSI"/>
+                                        <constraint firstItem="qGH-Tc-JlS" firstAttribute="trailing" secondItem="kSf-xj-bIG" secondAttribute="trailingMargin" id="wMp-cI-40r"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="ruleDetails" destination="qGH-Tc-JlS" id="2na-j5-wcH"/>
+                                    <outlet property="ruleName" destination="lzr-zn-b3U" id="7rJ-x5-AAl"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>

@@ -37,14 +37,23 @@ class RuleListController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell:UITableViewCell = UITableViewCell(style:UITableViewCellStyle.Default, reuseIdentifier:"main");
-        cell.textLabel!.text = tableData[indexPath.row].ruleNum + " " + tableData[indexPath.row].ruleName;
+        let cell:RuleListCell = tableView.dequeueReusableCellWithIdentifier("ruleListCell", forIndexPath:indexPath) as! RuleListCell;
+
+        cell.ruleName!.text = tableData[indexPath.row].ruleName;
+        if (tableData[indexPath.row].ruleNum == "PREFIX")
+        {
+            cell.ruleDetails!.text = tableData[indexPath.row].ruleNum;
+        }
+        else
+        {
+            cell.ruleDetails!.text = "Rule " + tableData[indexPath.row].ruleNum;
+        }
         return cell;
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         self.selectedIndex = indexPath.row;
-        let cell:UITableViewCell = tableView.dequeueReusableCellWithIdentifier("main", forIndexPath:indexPath) as! UITableViewCell;
+        let cell:RuleListCell = tableView.dequeueReusableCellWithIdentifier("ruleListCell", forIndexPath:indexPath) as! RuleListCell;
         self.performSegueWithIdentifier("to_rule_detail", sender: cell);
     }
     

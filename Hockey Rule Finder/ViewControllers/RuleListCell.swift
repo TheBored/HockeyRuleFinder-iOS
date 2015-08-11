@@ -1,0 +1,23 @@
+//
+//  RuleListCell.swift
+//  Hockey Rule Finder
+//
+//  Created by Brian Maxwell on 8/10/15.
+//  Copyright (c) 2015 Brian Maxwell. All rights reserved.
+//
+
+import Foundation
+
+class RuleListCell : UITableViewCell {
+    @IBOutlet weak var ruleName: UILabel!
+    @IBOutlet weak var ruleDetails: UILabel!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+    }
+    
+    override func setSelected(selected: Bool, animated: Bool) {
+        super.setSelected(selected, animated: animated)
+    }
+}
